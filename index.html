@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beranda | Rays of Hope</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <!-- Tailwind (replace with your build if needed) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: "#4a91e2" },
+          fontFamily: { poppins: ["Poppins", "ui-sans-serif", "system-ui"] },
+        },
+      },
+    };
+  </script>
+  <style>
+    body { font-family: "Poppins", system-ui, sans-serif; }
+    .reveal { opacity:0; transform: translateY(24px); transition: all .6s cubic-bezier(.16,1,.3,1); }
+    .reveal.revealed { opacity:1; transform: translateY(0); }
+  </style>
+</head>
+<body class="text-slate-800 antialiased bg-white">
+  <!-- HEADER include -->
+  <div data-include="header"></div>
+
+  <main class="pt-16">
+      <!-- ================= HERO ================= -->
+      <section
+        id="beranda"
+        class="reveal bg-gradient-to-b from-white to-sky-50"
+      >
+        <div
+          class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center"
+        >
+          <!-- Left -->
+          <div class="flex flex-col gap-6">
+            <span
+              class="inline-flex items-center gap-2 text-xs font-medium text-primary bg-primary/10 w-fit px-3 py-1 rounded-full"
+            >
+              <i data-lucide="heart-handshake" class="w-4 h-4"></i>
+              <span>Dukungan Kesehatan Mental</span>
+            </span>
+
+            <h1
+              class="text-xl sm:text-2xl lg:text-3xl font-semibold text-slate-900 leading-tight"
+            >
+              A Platform to Deepen Your Understanding of Psychology and Mental Health.
+            </h1>
+
+            <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+              Rays of Hope hadir untuk mendukung kesejahteraan emosional individu yang mengalami homesickness. 
+              Melalui pendekatan psikologis berbasis empati dan teknologi digital, kami membantu memahami kerinduan, 
+              membangun relasi sehat, dan menumbuhkan ketahanan psikologis dalam kehidupan baru.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 pt-2">
+              <a
+                href="#layanan"
+                class="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3 text-white text-sm font-semibold shadow-sm hover:shadow-md hover:bg-primary/90 transition-all"
+              >
+                <i data-lucide="play-circle" class="w-5 h-5"></i>
+                Mulai / Get Started
+              </a>
+
+              <a
+                href="#tentang"
+                class="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-300 bg-white px-5 py-3 text-slate-700 text-sm font-semibold hover:bg-slate-50 hover:border-slate-400 transition-colors"
+              >
+                <i data-lucide="info" class="w-5 h-5"></i>
+                Pelajari Lebih Lanjut
+              </a>
+            </div>
+
+            <div class="flex items-center gap-4 pt-4">
+              <div class="flex -space-x-2">
+                <div
+                  class="w-9 h-9 rounded-full bg-slate-200 ring-2 ring-white flex items-center justify-center text-[10px] font-medium text-slate-600"
+                >
+                  IMG
+                </div>
+                <div
+                  class="w-9 h-9 rounded-full bg-slate-300 ring-2 ring-white flex items-center justify-center text-[10px] font-medium text-slate-600"
+                >
+                  IMG
+                </div>
+                <div
+                  class="w-9 h-9 rounded-full bg-slate-400 ring-2 ring-white flex items-center justify-center text-[10px] font-medium text-slate-50"
+                >
+                  IMG
+                </div>
+              </div>
+              <p class="text-sm text-slate-600 leading-snug">
+                <span class="font-semibold text-slate-800"
+                  >+200 klien</span
+                ><br />
+                merasa lebih didengar & dipahami.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right (Image placeholder) -->
+          <div class="relative flex items-center justify-center lg:justify-end">
+            <div
+              class="w-full max-w-sm sm:max-w-md aspect-[4/3] rounded-2xl bg-white shadow-xl ring-1 ring-slate-200 overflow-hidden"
+            >
+              <img
+                src="assets/illustation-hero.webp"
+                alt="Ilustrasi konseling psikologi"
+                loading="lazy"
+                class="w-full h-full object-cover"
+                onerror="this.style.display='none';"
+              />
+              <!-- optional: overlay halus -->
+              <div class="pointer-events-none absolute inset-0 bg-gradient-to-tr from-white/0 via-white/0 to-white/20"></div>
+            </div>
+
+            <!-- Floating mini card -->
+            <div
+              class="absolute -bottom-6 -left-2 bg-white rounded-xl shadow-lg ring-1 ring-slate-200 p-4 flex items-start gap-3 w-56"
+            >
+              <div
+                class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center flex-shrink-0"
+              >
+                <i data-lucide="smile-plus" class="w-5 h-5"></i>
+              </div>
+              <div class="text-xs leading-relaxed">
+                <p class="text-slate-800 font-semibold mb-1">Konseling yang Hangat</p>
+                <p class="text-slate-500 text-[10px]">
+                  Setiap sesi kami berfokus pada empati dan kenyamanan dengan penuh kehangatan dan rasa aman.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= TENTANG KAMI ================= -->
+      <section id="tentang" class="reveal py-16 lg:py-24 bg-white">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center"
+          >
+            <!-- Left -->
+            <div class="space-y-6">
+              <div class="inline-flex items-center gap-2">
+                <span
+                  class="text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full inline-flex items-center gap-2"
+                >
+                  <i data-lucide="info" class="w-4 h-4"></i>
+                  Tentang Kami
+                </span>
+              </div>
+
+              <h2
+                class="text-2xl sm:text-3xl font-semibold text-slate-900 leading-tight"
+              >
+                Kami hadir untuk menemani proses pemulihan emosional Anda.
+              </h2>
+
+              <p class="text-slate-600 text-base leading-relaxed">
+                Kami percaya bahwa setiap individu berhak untuk merasa didengar,
+                dimengerti, dan diterima tanpa penilaian. Melalui pendekatan yang
+                empatik dan ilmiah, kami membantu Anda memahami diri sendiri,
+                mengelola emosi, serta menemukan kembali keseimbangan dalam hidup.
+              </p>
+
+              <p class="text-slate-600 text-base leading-relaxed">
+                Di <span class="font-semibold text-slate-800">Rays of Hope</span>,
+                kami berkomitmen menciptakan ruang yang aman dan nyaman agar Anda
+                dapat berbagi cerita, mendapatkan panduan profesional, dan tumbuh
+                menjadi pribadi yang lebih kuat secara mental maupun emosional.
+              </p>
+
+              <div class="flex flex-col gap-3 text-sm">
+                <div class="flex items-start gap-3">
+                  <div
+                    class="w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center flex-shrink-0"
+                  >
+                    <i data-lucide="check-circle" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <p class="text-slate-800 font-semibold">
+                      Terapis Berlisensi
+                    </p>
+                    <p class="text-slate-500 leading-snug">
+                      Lorem ipsum dolor sit amet consectetur.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <div
+                    class="w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center flex-shrink-0"
+                  >
+                    <i data-lucide="headphones" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <p class="text-slate-800 font-semibold">
+                      Ruang aman & rahasia
+                    </p>
+                    <p class="text-slate-500 leading-snug">
+                      Lorem ipsum dolor sit amet consectetur.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <div
+                    class="w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center flex-shrink-0"
+                  >
+                    <i data-lucide="clock" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <p class="text-slate-800 font-semibold">
+                      Fleksibel & mudah dijangkau
+                    </p>
+                    <p class="text-slate-500 leading-snug">
+                      Lorem ipsum dolor sit amet consectetur.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right (image/illustration placeholder) -->
+            <div
+              class="w-full max-w-lg mx-auto aspect-[4/3] rounded-2xl bg-white shadow-xl ring-1 ring-slate-200 overflow-hidden relative"
+            >
+              <img
+                src="/assets/illustration-about-us.webp"
+                alt="Foto Tim Psikolog Klinik"
+                loading="lazy"
+                class="w-full h-full object-cover"
+                onerror="this.style.display='none';"
+              />
+
+              <!-- optional: overlay lembut agar teks di kiri tetap kontras -->
+              <div class="absolute inset-0 bg-gradient-to-t from-white/0 via-white/0 to-white/20 pointer-events-none"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= LAYANAN ================= -->
+      <section
+        id="layanan"
+        class="reveal py-16 lg:py-24 bg-gradient-to-b from-sky-50 to-white"
+      >
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <!-- heading -->
+          <div class="text-center max-w-2xl mx-auto space-y-4 mb-12">
+            <span
+              class="inline-flex items-center gap-2 text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full"
+            >
+              <i data-lucide="briefcase" class="w-4 h-4"></i>
+              Layanan Kami
+            </span>
+
+            <h2
+              class="text-2xl sm:text-3xl font-semibold text-slate-900 leading-tight"
+            >
+              Pendekatan Profesional, Empatik, dan Terarah
+            </h2>
+
+            <p class="text-slate-600 text-base leading-relaxed">
+              Kami menyediakan layanan yang dirancang untuk memahami kondisi
+              Anda, memberi dukungan, dan membantu proses pemulihan serta
+              pengembangan diri.
+            </p>
+          </div>
+
+          <!-- cards -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto"
+          >
+            <!-- Assessmen -->
+            <div
+              class="rounded-xl bg-white p-6 shadow-lg ring-1 ring-slate-200 flex flex-col gap-4"
+            >
+              <div
+                class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center"
+              >
+                <i data-lucide="clipboard-list" class="w-5 h-5"></i>
+              </div>
+              <div class="space-y-2">
+                <h3 class="font-semibold text-slate-900 text-lg">
+                  Assessmen Psikologis
+                </h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Layanan asesmen membantu Anda memahami kondisi emosi, perilaku, serta potensi diri melalui alat ukur psikologi yang terpercaya. Hasilnya menjadi dasar untuk menentukan langkah penanganan yang tepat.
+                </p>
+              </div>
+              <a
+                href="assessment.html"
+                class="mt-auto inline-flex items-center text-sm font-semibold text-primary hover:text-primary/80"
+              >
+                Mulai Assessmen
+                <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+              </a>
+            </div>
+
+            <!-- Intervensi -->
+            <div
+              class="rounded-xl bg-white p-6 shadow-lg ring-1 ring-slate-200 flex flex-col gap-4"
+            >
+              <div
+                class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center"
+              >
+                <i data-lucide="activity" class="w-5 h-5"></i>
+              </div>
+              <div class="space-y-2">
+                <h3 class="font-semibold text-slate-900 text-lg">
+                  Intervensi Psikologis
+                </h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Program intervensi difokuskan untuk membantu Anda mengatasi masalah psikologis secara terarah.
+                </p>
+              </div>
+              <button
+                class="mt-auto inline-flex items-center text-sm font-semibold text-primary hover:text-primary/80"
+              >
+                Mulai Intervensi
+                <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+              </button>
+            </div>
+
+            <!-- Konseling -->
+            <div
+              class="rounded-xl bg-white p-6 shadow-lg ring-1 ring-slate-200 flex flex-col gap-4"
+            >
+              <div
+                class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center"
+              >
+                <i data-lucide="message-circle-heart" class="w-5 h-5"></i>
+              </div>
+              <div class="space-y-2">
+                <h3 class="font-semibold text-slate-900 text-lg">
+                  Konseling Pribadi
+                </h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Dapatkan ruang aman untuk berbicara dengan psikolog profesional yang siap membantu Anda memahami perasaan, menemukan solusi, serta membangun kesejahteraan mental yang lebih baik.
+                </p>
+              </div>
+              <a
+                href="/personal-counseling.html#team"
+                class="mt-auto inline-flex items-center text-sm font-semibold text-primary hover:text-primary/80"
+              >
+                Mulai Konseling
+                <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= KONTAK ================= -->
+      <section
+        id="kontak"
+        class="reveal py-16 lg:py-24 bg-gradient-to-b from-white to-sky-50"
+      >
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start"
+          >
+            <!-- Left: form -->
+            <div
+              class="rounded-2xl bg-white shadow-xl ring-1 ring-slate-200 p-6 sm:p-8"
+            >
+              <div class="space-y-2 mb-8">
+                <span
+                  class="inline-flex items-center gap-2 text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full"
+                >
+                  <i data-lucide="mail" class="w-4 h-4"></i>
+                  Hubungi Kami
+                </span>
+                <h2
+                  class="text-xl sm:text-2xl font-semibold text-slate-900 leading-tight"
+                >
+                  Ada pertanyaan atau ingin mulai sesi konseling?
+                </h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Isi formulir di bawah, tim kami akan menghubungi Anda.
+                </p>
+              </div>
+
+              <form class="space-y-5">
+                <!-- Nama -->
+                <div class="grid gap-2">
+                  <label
+                    for="nama"
+                    class="text-sm font-medium text-slate-700 flex items-center gap-2"
+                  >
+                    <i data-lucide="user" class="w-4 h-4 text-primary"></i>
+                    Nama Lengkap
+                  </label>
+                  <input
+                    id="nama"
+                    type="text"
+                    placeholder="Nama Anda"
+                    class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50"
+                  />
+                </div>
+
+                <!-- Email -->
+                <div class="grid gap-2">
+                  <label
+                    for="email"
+                    class="text-sm font-medium text-slate-700 flex items-center gap-2"
+                  >
+                    <i data-lucide="at-sign" class="w-4 h-4 text-primary"></i>
+                    Email
+                  </label>
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="email@contoh.com"
+                    class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50"
+                  />
+                </div>
+
+                <!-- Pesan -->
+                <div class="grid gap-2">
+                  <label
+                    for="pesan"
+                    class="text-sm font-medium text-slate-700 flex items-center gap-2"
+                  >
+                    <i data-lucide="message-square" class="w-4 h-4 text-primary"></i>
+                    Pesan
+                  </label>
+                  <textarea
+                    id="pesan"
+                    rows="4"
+                    placeholder="Ceritakan sedikit tentang apa yang Anda rasakan..."
+                    class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50"
+                  ></textarea>
+                </div>
+
+                <!-- Button -->
+                <button
+                  type="button"
+                  class="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3 text-white text-sm font-semibold shadow-sm hover:shadow-md hover:bg-primary/90 transition-all"
+                >
+                  <i data-lucide="send" class="w-4 h-4"></i>
+                  Kirim Pesan
+                </button>
+              </form>
+            </div>
+
+            <!-- Right: contact info -->
+            <div class="space-y-8">
+              <div class="space-y-2">
+                <h3 class="text-lg font-semibold text-slate-900">
+                  Informasi Kontak
+                </h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Anda bisa menghubungi kami secara langsung melalui kontak di
+                  bawah:
+                </p>
+              </div>
+
+              <div class="space-y-4 text-sm">
+                <!-- Email -->
+                <div class="flex items-start gap-3">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary/10 text-primary flex-shrink-0"
+                  >
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <p class="text-slate-800 font-semibold">Email</p>
+                    <p class="text-slate-600">halo@raysofhope.com</p>
+                  </div>
+                </div>
+
+                <!-- Telepon -->
+                <div class="flex items-start gap-3">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary/10 text-primary flex-shrink-0"
+                  >
+                    <i data-lucide="phone" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <p class="text-slate-800 font-semibold">WhatsApp / Telp</p>
+                    <p class="text-slate-600">+62 812-0000-0000</p>
+                  </div>
+                </div>
+
+                <!-- Lokasi -->
+                <div class="flex items-start gap-3">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary/10 text-primary flex-shrink-0"
+                  >
+                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <p class="text-slate-800 font-semibold">Alamat</p>
+                    <p class="text-slate-600 leading-relaxed">
+                      Jl. Contoh Sehat No. 123<br />
+                      Malang, Indonesia
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Google Maps Embed -->
+              <div
+                class="w-full aspect-[16/9] rounded-xl overflow-hidden ring-1 ring-slate-200 shadow"
+              >
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.390363834334!2d112.61148057475747!3d-7.966620879367164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd628213d7f76ed%3A0x401576d14fedbd0!2sMalang%2C%20Kota%20Malang%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1700000000001!5m2!1sid!2sid"
+                  width="600"
+                  height="450"
+                  style="border:0;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  class="w-full h-full"
+                ></iframe>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  <!-- FOOTER include -->
+  <div data-include="footer"></div>
+
+  <!-- Include helper (inject partials + init) -->
+  <script src="/assets/include.js"></script>
+</body>
+</html>
