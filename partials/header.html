@@ -1,9 +1,16 @@
-<header class="fixed top-0 left-0 w-full z-50 border-b border-slate-200 bg-white/80 backdrop-blur-md">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+<header
+  class="fixed top-0 left-0 w-full z-50 border-b border-slate-200 bg-white/80 backdrop-blur-md"
+>
+  <div
+    class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16"
+  >
     <!-- Logo -->
-    <a href="/index.html#beranda" class="flex items-center gap-2 font-semibold text-slate-900">
+    <a
+      href="./index.html#beranda"
+      class="flex items-center gap-2 font-semibold text-slate-900"
+    >
       <img
-        src="/assets/logo.webp"
+        src="./assets/logo.webp"
         alt="Rays of Hope"
         class="h-9 w-auto object-contain"
         loading="lazy"
@@ -12,17 +19,26 @@
       <span class="text-slate-900 leading-none">Rays of Hope</span>
     </a>
 
-
     <!-- Nav -->
     <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
-      <a href="/index.html#beranda" data-nav="beranda" class="nav-link text-slate-700 hover:text-primary transition-colors">Beranda</a>
-      <a href="/index.html#tentang" data-nav="tentang" class="nav-link text-slate-700 hover:text-primary transition-colors">Tentang Kami</a>
+      <a
+        href="./index.html#beranda"
+        data-nav="beranda"
+        class="nav-link text-slate-700 hover:text-primary transition-colors"
+        >Beranda</a
+      >
+      <a
+        href="./index.html#tentang"
+        data-nav="tentang"
+        class="nav-link text-slate-700 hover:text-primary transition-colors"
+        >Tentang Kami</a
+      >
 
       <!-- Layanan + Dropdown -->
       <div class="relative group">
         <!-- trigger -->
         <a
-          href="/index.html#layanan"
+          href="./index.html#layanan"
           data-nav="layanan"
           class="nav-link inline-flex items-center gap-1 text-slate-700 hover:text-primary transition-colors"
         >
@@ -32,50 +48,61 @@
 
         <!-- dropdown -->
         <div
-          class="invisible opacity-0 translate-y-2 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0
-                group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-0
-                transition-all duration-150 ease-out
-                absolute left-0 top-full mt-2 w-64"
+          class="invisible opacity-0 translate-y-2 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-0 transition-all duration-150 ease-out absolute left-0 top-full mt-2 w-64"
         >
           <div class="rounded-xl bg-white shadow-lg ring-1 ring-slate-200 p-2">
             <a
-              href="/assessment.html"
+              href="./assessment.html"
               class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-50 text-slate-700"
             >
               <i data-lucide="clipboard-list" class="w-4 h-4 text-primary"></i>
               <span class="text-sm font-medium">Assessmen Psikologis</span>
             </a>
             <a
-              href="/index.html#layanan"
+              href="./index.html#layanan"
               class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-50 text-slate-700"
             >
               <i data-lucide="activity" class="w-4 h-4 text-primary"></i>
               <span class="text-sm font-medium">Intervensi Psikologis</span>
             </a>
             <a
-              href="/personal-counseling.html"
+              href="./personal-counseling.html"
               class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-50 text-slate-700"
             >
-              <i data-lucide="message-circle-heart" class="w-4 h-4 text-primary"></i>
+              <i
+                data-lucide="message-circle-heart"
+                class="w-4 h-4 text-primary"
+              ></i>
               <span class="text-sm font-medium">Konseling Pribadi</span>
             </a>
           </div>
         </div>
       </div>
 
-      <a href="/index.html#kontak" data-nav="kontak" class="nav-link text-slate-700 hover:text-primary transition-colors">Kontak</a>
+      <a
+        href="./footer.html"
+        data-nav="kontak"
+        class="nav-link text-slate-700 hover:text-primary transition-colors"
+        >Kontak</a
+      >
     </nav>
 
     <!-- CTA -->
     <div class="hidden md:block">
-      <a href="/personal-counseling.html#team" class="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-white text-sm font-semibold shadow-sm hover:shadow-md hover:bg-primary/90 transition-all">
+      <a
+        href="./personal-counseling.html#team"
+        class="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-white text-sm font-semibold shadow-sm hover:shadow-md hover:bg-primary/90 transition-all"
+      >
         <i data-lucide="message-circle" class="w-4 h-4"></i>
         Konsultasi
       </a>
     </div>
 
     <!-- mobile menu button (dummy) -->
-    <button class="md:hidden inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-3 py-2 text-slate-700" aria-label="Toggle Menu">
+    <button
+      class="md:hidden inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-3 py-2 text-slate-700"
+      aria-label="Toggle Menu"
+    >
       <i data-lucide="menu" class="w-5 h-5"></i>
     </button>
   </div>
