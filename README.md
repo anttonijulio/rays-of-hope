@@ -1,6 +1,6 @@
 # Rays of Hope
 
-!Rays of Hope
+![Rays of Hope](image.png)
 
 Rays of Hope adalah ruang digital untuk membantu Anda menjaga kesehatan mental dengan pendekatan yang hangat dan mudah diakses.  
 Di sini, setiap orang bisa menemukan tempat untuk memahami diri, menenangkan pikiran, dan terhubung dengan psikolog profesional.
