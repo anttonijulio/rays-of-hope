@@ -39,10 +39,9 @@
 
     function setActiveNav() {
       const path = window.location.pathname;
-      const isPersonal = /personal-counseling\.html$/.test(path);
       const isAssess = /assessment\.html$/.test(path);
 
-      if (isPersonal || isAssess) {
+      if (isAssess) {
         document.querySelectorAll(".nav-link").forEach((a) => {
           a.classList.toggle(
             "text-primary",
