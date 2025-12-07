@@ -79,7 +79,7 @@
               A Supportive Space for Youth Facing New Beginnings
             </h1>
 
-            <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+            <p class="sm:text-base text-[13px] text-slate-600 leading-relaxed">
               Rays of Hope merupakan sebuah program yang melambangkan hadirnya
               cahaya harapan di tengah berbagai kesulitan, terutama bagi remaja
               yang sedang berusaha menyesuaikan diri jauh dari lingkungan asal
@@ -328,7 +328,7 @@
 
           <!-- cards -->
           <div
-            class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto"
+            class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8 max-w-7xl mx-auto"
           >
             <!-- Assessmen -->
             <div
@@ -343,11 +343,10 @@
                 <h3 class="font-semibold text-slate-900 text-lg">
                   Assessmen Psikologis
                 </h3>
-                <p class="text-slate-600 text-sm leading-relaxed">
+                <p class="text-slate-600 text-xs leading-relaxed">
                   Layanan asesmen membantu Anda memahami kondisi emosi,
                   perilaku, serta potensi diri melalui alat ukur psikologi yang
-                  terpercaya. Hasilnya menjadi dasar untuk menentukan langkah
-                  penanganan yang tepat.
+                  terpercaya.
                 </p>
               </div>
               <a
@@ -372,7 +371,7 @@
                 <h3 class="font-semibold text-slate-900 text-lg">
                   Intervensi Psikologis
                 </h3>
-                <p class="text-slate-600 text-sm leading-relaxed">
+                <p class="text-slate-600 text-xs leading-relaxed">
                   Program intervensi difokuskan untuk membantu Anda mengatasi
                   masalah psikologis secara terarah.
                 </p>
@@ -386,7 +385,36 @@
               </a>
             </div>
 
-            <!-- Konseling -->
+            <!-- Rujukan Profesional -->
+            <div
+              class="rounded-xl bg-white p-6 shadow-lg ring-1 ring-slate-200 flex flex-col gap-4"
+            >
+              <div
+                class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center"
+              >
+                <i data-lucide="stethoscope" class="w-5 h-5"></i>
+              </div>
+              <div class="space-y-2">
+                <h3 class="font-semibold text-slate-900 text-lg">
+                  Rujukan Profesional
+                </h3>
+                <p class="text-slate-600 text-xs leading-relaxed">
+                  Dapatkan ruang aman untuk berbicara dengan psikolog
+                  profesional yang siap membantu Anda memahami perasaan.
+                </p>
+              </div>
+              <a
+                href="https://www.halodoc.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-auto inline-flex items-center text-sm font-semibold text-primary hover:text-primary/80"
+              >
+                Mulai Rujukan
+                <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+              </a>
+            </div>
+
+            <!-- Peer Konseling -->
             <div
               class="rounded-xl bg-white p-6 shadow-lg ring-1 ring-slate-200 flex flex-col gap-4"
             >
@@ -396,18 +424,15 @@
                 <i data-lucide="message-circle-heart" class="w-5 h-5"></i>
               </div>
               <div class="space-y-2">
-                <h3 class="font-semibold text-slate-900 text-lg">Konseling</h3>
-                <p class="text-slate-600 text-sm leading-relaxed">
-                  Dapatkan ruang aman untuk berbicara dengan psikolog
-                  profesional yang siap membantu Anda memahami perasaan,
-                  menemukan solusi, serta membangun kesejahteraan mental yang
-                  lebih baik.
+                <h3 class="font-semibold text-slate-900 text-lg">
+                  Peer Konseling
+                </h3>
+                <p class="text-slate-600 text-xs leading-relaxed">
+                  Temukan kembali rasa nyaman melalui pendampingan oleh Tim Kami
                 </p>
               </div>
               <a
-                href="https://www.halodoc.com/"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="peer-konseling.html"
                 class="mt-auto inline-flex items-center text-sm font-semibold text-primary hover:text-primary/80"
               >
                 Mulai Konseling
@@ -479,7 +504,7 @@
                 class="mt-auto inline-flex items-center text-sm font-semibold text-primary hover:text-primary/80"
               >
                 Pahami lebih lanjut
-                <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                <i data-lucide="external-link" class="w-4 h-4 ml-1"></i>
               </a>
             </article>
 
@@ -516,7 +541,7 @@
                 class="mt-auto inline-flex items-center text-sm font-semibold text-primary hover:text-primary/80"
               >
                 Pahami lebih lanjut
-                <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                <i data-lucide="external-link" class="w-4 h-4 ml-1"></i>
               </a>
             </article>
 
@@ -553,7 +578,7 @@
                 class="mt-auto inline-flex items-center text-sm font-semibold text-primary hover:text-primary/80"
               >
                 Pahami lebih lanjut
-                <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                <i data-lucide="external-link" class="w-4 h-4 ml-1"></i>
               </a>
             </article>
           </div>
@@ -583,7 +608,7 @@
                 <h2
                   class="text-xl sm:text-2xl font-semibold text-slate-900 leading-tight"
                 >
-                  Ada pertanyaan atau ingin mulai sesi konseling?
+                  Ada pertanyaan atau ingin mulai sesi Rujukan?
                 </h2>
                 <p class="text-slate-600 text-sm leading-relaxed">
                   Isi formulir di bawah, tim kami akan menghubungi Anda.
