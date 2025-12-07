@@ -102,26 +102,111 @@
           </p>
         </div>
 
-        <div
-          class="w-full flex items-center justify-center px-4 sm:px-8 lg:px-16"
-        >
+        <div class="w-full flex items-center justify-center px-4 px-8 lg:px-16">
           <article
-            class="rounded-2xl bg-white p-6 sm:p-8 shadow-xl ring-1 ring-slate-200 flex flex-col items-center"
+            class="rounded-2xl bg-white p-6 sm:p-8 shadow-xl ring-1 ring-slate-200"
           >
-            <!-- Poster -->
-            <img
-              src="./assets/peer-konseling-kelompok-poster.webp"
-              alt="Poster Konseling Kelompok"
-              class="w-full max-w-md rounded-xl mb-6"
-            />
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center"
+              >
+                <i data-lucide="users" class="w-5 h-5"></i>
+              </div>
+              <h2 class="text-lg sm:text-xl font-semibold text-slate-900">
+                Jadwalkan Konseling Kelompok
+              </h2>
+            </div>
 
-            <!-- Action Button -->
-            <button
-              onclick="openBookingForm()"
-              class="w-full max-w-md inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3 text-white text-sm font-semibold shadow-sm hover:shadow-md hover:bg-primary/90 transition-all"
-            >
-              Booking
-            </button>
+            <p class="text-slate-600 text-sm leading-relaxed mb-5">
+              Jadwalkan sesi tatap muka/online untuk mendalami kebutuhan Anda
+              secara personal.
+            </p>
+
+            <form class="grid gap-4">
+              <!-- Nama Lengkap -->
+              <div class="grid gap-2">
+                <label
+                  for="nama"
+                  class="text-sm font-medium text-slate-700 flex items-center gap-2"
+                >
+                  <i data-lucide="user" class="w-4 h-4 text-primary"></i>
+                  Nama Lengkap
+                </label>
+                <input
+                  id="nama"
+                  type="text"
+                  placeholder="Nama Anda"
+                  class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50"
+                  required
+                />
+              </div>
+
+              <!-- No Telepon -->
+              <div class="grid gap-2">
+                <label
+                  for="phone"
+                  class="text-sm font-medium text-slate-700 flex items-center gap-2"
+                >
+                  <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+                  No Telepon
+                </label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  inputmode="numeric"
+                  autocomplete="tel"
+                  placeholder="08xxxxxxxxxx"
+                  class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50"
+                  minlength="10"
+                  maxlength="13"
+                  pattern="[0-9]{10,13}"
+                  oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                  required
+                />
+                <!-- optional: pesan validasi sederhana -->
+                <p class="text-[11px] text-slate-500">
+                  Hanya angka (10–13 digit), contoh: 081234567890
+                </p>
+              </div>
+
+              <!-- Sesi -->
+              <div class="grid gap-2">
+                <label
+                  for="sesi"
+                  class="text-sm font-medium text-slate-700 flex items-center gap-2"
+                >
+                  <i
+                    data-lucide="calendar-clock"
+                    class="w-4 h-4 text-primary"
+                  ></i>
+                  Pilih Jadwal
+                </label>
+                <select
+                  id="sesi"
+                  class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50"
+                  required
+                >
+                  <option value="" disabled selected>Pilih Jadwal</option>
+                  <option value="pagi">Pagi (08:00–11:00)</option>
+                  <option value="siang">Siang (12:00–15:00)</option>
+                  <option value="sore">Sore (16:00–19:00)</option>
+                </select>
+                <p class="text-xs text-slate-500">
+                  Waktu yang tertera adalah rentang ketersediaan. Tim kami akan
+                  mengonfirmasi jadwal pasti via email/WhatsApp.
+                </p>
+              </div>
+
+              <!-- Submit -->
+              <button
+                type="submit"
+                class="mt-2 inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3 text-white text-sm font-semibold shadow-sm hover:shadow-md hover:bg-primary/90 transition-all"
+              >
+                <i data-lucide="send" class="w-4 h-4"></i>
+                Kirim
+              </button>
+            </form>
           </article>
         </div>
       </section>
@@ -132,117 +217,5 @@
 
     <!-- Include helper (inject partials + init) -->
     <script src="./assets/include.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    <script>
-      function openBookingForm() {
-        Swal.fire({
-          width: 520,
-          padding: 0,
-          showConfirmButton: false,
-          html: `
-      <article class="bg-white p-4 sm:p-8">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
-            <i data-lucide="stethoscope" class="w-5 h-5"></i>
-          </div>
-          <div>
-            <h2 class="text-sm text-start text-slate-900">
-              Booking Sesi
-            </h2>
-            <h2 class="text-start font-semibold text-slate-900">
-              Kelompok
-            </h2>
-          </div>
-        </div>
-
-        <form id="bookingForm" class="grid gap-4 mt-6">
-
-          <div class="grid gap-2">
-            <label for="nama" class="text-sm font-medium text-slate-700 flex items-center gap-2">
-              <i data-lucide="user" class="w-4 h-4 text-primary"></i>
-              Nama Lengkap
-            </label>
-            <input
-              id="nama"
-              type="text"
-              placeholder="Nama Anda"
-              class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50"
-              required
-            />
-          </div>
-
-          <div class="grid gap-2">
-            <label for="phone" class="text-sm font-medium text-slate-700 flex items-center gap-2">
-              <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
-              No Telepon
-            </label>
-            <input
-              id="phone"
-              type="tel"
-              inputmode="numeric"
-              placeholder="08xxxxxxxxxx"
-              class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50"
-              minlength="10"
-              maxlength="13"
-              pattern="[0-9]{10,13}"
-              oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-              required
-            />
-            <p class="text-start text-[11px] text-slate-500">
-              Hanya angka (10–13 digit), contoh: 081234567890
-            </p>
-          </div>
-
-          <div class="grid gap-2">
-            <label for="sesi" class="text-sm font-medium text-slate-700 flex items-center gap-2">
-              <i data-lucide="calendar-clock" class="w-4 h-4 text-primary"></i>
-              Pilih Jadwal
-            </label>
-            <select
-              id="sesi"
-              class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50"
-              required
-            >
-              <option value="" disabled selected>Pilih Jadwal</option>
-              <option value="pagi">Pagi (08:00–11:00)</option>
-              <option value="siang">Siang (12:00–15:00)</option>
-              <option value="sore">Sore (16:00–19:00)</option>
-            </select>
-            <p class="text-start text-xs text-slate-500">
-              Tim kami akan mengonfirmasi jadwal pasti via WhatsApp.
-            </p>
-          </div>
-
-          <button
-            type="submit"
-            class="mt-2 inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3 text-white text-sm font-semibold shadow-sm hover:shadow-md hover:bg-primary/90 transition-all"
-          >
-            <i data-lucide="send" class="w-4 h-4"></i>
-            Kirim
-          </button>
-        </form>
-      </article>
-    `,
-          didOpen: () => {
-            lucide.createIcons();
-            document
-              .getElementById("bookingForm")
-              .addEventListener("submit", function (e) {
-                e.preventDefault();
-
-                Swal.fire({
-                  icon: "success",
-                  title: "Permintaan Terkirim",
-                  text: `Form booking Kelompok berhasil dikirim.`,
-                  confirmButtonText: "OK",
-                  confirmButtonColor: "#4a91e2",
-                });
-              });
-          },
-        });
-      }
-    </script>
   </body>
 </html>
