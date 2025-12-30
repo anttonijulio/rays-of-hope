@@ -588,171 +588,62 @@
       <!-- ================= KONTAK ================= -->
       <section
         id="kontak"
-        class="reveal py-16 lg:py-24 bg-gradient-to-b from-white to-sky-50"
+        class="w-full py-16 lg:py-24 bg-gradient-to-b from-white to-sky-50"
       >
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div
-            class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start"
-          >
-            <!-- Left: form -->
-            <div
-              class="rounded-2xl bg-white shadow-xl ring-1 ring-slate-200 p-6 sm:p-8"
+        <div class="max-w-xl mx-auto text-center space-y-8">
+          <div class="space-y-2">
+            <h3 class="text-2xl font-semibold text-slate-900">
+              Informasi Kontak
+            </h3>
+            <p class="text-sm text-slate-500">Hubungi kami langsung</p>
+          </div>
+
+          <div class="flex justify-center gap-12">
+            <!-- Email -->
+            <a
+              href="mailto:elmbeatric95@gmail.com"
+              class="group space-y-2 cursor-pointer"
             >
-              <div class="space-y-2 mb-8">
-                <span
-                  class="inline-flex items-center gap-2 text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full"
-                >
-                  <i data-lucide="mail" class="w-4 h-4"></i>
-                  Hubungi Kami
-                </span>
-                <h2
-                  class="text-xl sm:text-2xl font-semibold text-slate-900 leading-tight"
-                >
-                  Ada pertanyaan atau ingin mulai sesi Rujukan?
-                </h2>
-                <p class="text-slate-600 text-sm leading-relaxed">
-                  Isi formulir di bawah, tim kami akan menghubungi Anda.
-                </p>
-              </div>
-
-              <form class="space-y-5">
-                <!-- Nama -->
-                <div class="grid gap-2">
-                  <label
-                    for="nama"
-                    class="text-sm font-medium text-slate-700 flex items-center gap-2"
-                  >
-                    <i data-lucide="user" class="w-4 h-4 text-primary"></i>
-                    Nama Lengkap
-                  </label>
-                  <input
-                    id="nama"
-                    type="text"
-                    placeholder="Nama Anda"
-                    class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50"
-                  />
-                </div>
-
-                <!-- Email -->
-                <div class="grid gap-2">
-                  <label
-                    for="email"
-                    class="text-sm font-medium text-slate-700 flex items-center gap-2"
-                  >
-                    <i data-lucide="at-sign" class="w-4 h-4 text-primary"></i>
-                    Email
-                  </label>
-                  <input
-                    id="email"
-                    type="email"
-                    placeholder="email@contoh.com"
-                    class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50"
-                  />
-                </div>
-
-                <!-- Pesan -->
-                <div class="grid gap-2">
-                  <label
-                    for="pesan"
-                    class="text-sm font-medium text-slate-700 flex items-center gap-2"
-                  >
-                    <i
-                      data-lucide="message-square"
-                      class="w-4 h-4 text-primary"
-                    ></i>
-                    Pesan
-                  </label>
-                  <textarea
-                    id="pesan"
-                    rows="4"
-                    placeholder="Ceritakan sedikit tentang apa yang Anda rasakan..."
-                    class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50"
-                  ></textarea>
-                </div>
-
-                <!-- Button -->
-                <button
-                  type="button"
-                  class="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3 text-white text-sm font-semibold shadow-sm hover:shadow-md hover:bg-primary/90 transition-all"
-                >
-                  <i data-lucide="send" class="w-4 h-4"></i>
-                  Kirim Pesan
-                </button>
-              </form>
-            </div>
-
-            <!-- Right: contact info -->
-            <div class="space-y-8">
-              <div class="space-y-2">
-                <h3 class="text-lg font-semibold text-slate-900">
-                  Informasi Kontak
-                </h3>
-                <p class="text-slate-600 text-sm leading-relaxed">
-                  Anda bisa menghubungi kami secara langsung melalui kontak di
-                  bawah:
-                </p>
-              </div>
-
-              <div class="space-y-4 text-sm">
-                <!-- Email -->
-                <div class="flex items-start gap-3">
-                  <div
-                    class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary/10 text-primary flex-shrink-0"
-                  >
-                    <i data-lucide="mail" class="w-5 h-5"></i>
-                  </div>
-                  <div>
-                    <p class="text-slate-800 font-semibold">Email</p>
-                    <p class="text-slate-600">halo@raysofhope.com</p>
-                  </div>
-                </div>
-
-                <!-- Telepon -->
-                <div class="flex items-start gap-3">
-                  <div
-                    class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary/10 text-primary flex-shrink-0"
-                  >
-                    <i data-lucide="phone" class="w-5 h-5"></i>
-                  </div>
-                  <div>
-                    <p class="text-slate-800 font-semibold">WhatsApp / Telp</p>
-                    <p class="text-slate-600">+62 812-0000-0000</p>
-                  </div>
-                </div>
-
-                <!-- Lokasi -->
-                <div class="flex items-start gap-3">
-                  <div
-                    class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary/10 text-primary flex-shrink-0"
-                  >
-                    <i data-lucide="map-pin" class="w-5 h-5"></i>
-                  </div>
-                  <div>
-                    <p class="text-slate-800 font-semibold">Alamat</p>
-                    <p class="text-slate-600 leading-relaxed">
-                      Jl. Contoh Sehat No. 123<br />
-                      Malang, Indonesia
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Google Maps Embed -->
               <div
-                class="w-full aspect-[16/9] rounded-xl overflow-hidden ring-1 ring-slate-200 shadow"
+                class="w-10 h-10 mx-auto rounded-lg bg-primary/10 text-primary flex items-center justify-center transition group-hover:bg-primary/20"
               >
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.390363834334!2d112.61148057475747!3d-7.966620879367164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd628213d7f76ed%3A0x401576d14fedbd0!2sMalang%2C%20Kota%20Malang%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1700000000001!5m2!1sid!2sid"
-                  width="600"
-                  height="450"
-                  style="border: 0"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                  class="w-full h-full"
-                ></iframe>
+                <i data-lucide="mail" class="w-5 h-5"></i>
               </div>
-            </div>
+              <p
+                class="text-sm font-medium text-slate-800 transition group-hover:text-primary"
+              >
+                Email
+              </p>
+              <p
+                class="text-sm text-slate-600 transition group-hover:text-primary"
+              >
+                elmbeatric95@gmail.com
+              </p>
+            </a>
+
+            <!-- WhatsApp -->
+            <a
+              href="https://wa.me/6285134725825"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group space-y-2 cursor-pointer"
+            >
+              <div
+                class="w-10 h-10 mx-auto rounded-lg bg-primary/10 text-primary flex items-center justify-center transition group-hover:bg-primary/20"
+              >
+                <i data-lucide="phone" class="w-5 h-5"></i>
+              </div>
+              <p
+                class="text-sm font-medium text-slate-800 transition group-hover:text-primary"
+              >
+                WhatsApp
+              </p>
+              <p
+                class="text-sm text-slate-600 transition group-hover:text-primary"
+              >
+                +62 851 3472 5825
+              </p>
+            </a>
           </div>
         </div>
       </section>
